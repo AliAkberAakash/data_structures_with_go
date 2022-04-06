@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"linked_list/linked_list"
+	"linked_list/pkg"
 )
 
 func main() {
-	var list linked_list.LinkedList
+	var list pkg.LinkedList
 
 	list.Add(5, 0)
 	list.Add(999, 0)
@@ -19,5 +19,5 @@ func main() {
 
 	fmt.Println(list.Find(100))
 
-	list.Add(999, -1)
+	//list.Add(999, -1)
 }
