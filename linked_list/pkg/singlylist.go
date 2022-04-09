@@ -1,6 +1,9 @@
 package pkg
 
-import "fmt"
+import (
+	"fmt"
+	"linked_list/listerror"
+)
 
 type LinkedList struct {
 	Head   *Node
@@ -12,10 +15,13 @@ type Node struct {
 	Next *Node
 }
 
-func (list *LinkedList) Add(value int, position int) {
+func (list *LinkedList) Add(value int, position int) error {
+
+	var err *listerror.OutOfBoundsError
 
 	if position > list.Length || position < 0 {
-		panic("Out of bounds")
+		err = &listerror.OutOfBoundsError{Position: position}
+		return err
 	}
 
 	var newNode = &Node{
@@ -44,6 +50,8 @@ func (list *LinkedList) Add(value int, position int) {
 	}
 
 	list.Length++
+
+	return nil
 }
 
 func (list LinkedList) Find(v int) int {
@@ -69,4 +77,24 @@ func (list LinkedList) PrintList() {
 		head = head.Next
 	}
 	fmt.Println("")
+}
+
+func (list *LinkedList) Delete(item int) {
+	head := list.Head
+	prev := head
+
+	for head != nil {
+		if head.Data == item {
+			if prev == head {
+				list.Head = nil
+
+			} else {
+				prev.Next = head.Next
+			}
+			list.Length--
+			return
+		}
+		prev = head
+		head = head.Next
+	}
 }
