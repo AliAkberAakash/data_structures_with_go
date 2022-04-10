@@ -1,8 +1,9 @@
-package pkg
+package singlylist
 
 import (
 	"fmt"
-	"linked_list/listerror"
+
+	"github.com/AliAkberAakash/data_structures_with_go/linked_list/listerror"
 )
 
 type LinkedList struct {

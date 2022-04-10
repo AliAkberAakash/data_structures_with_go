@@ -1,13 +1,12 @@
-package test
+package singlylist
 
 import (
 	"fmt"
-	"linked_list/pkg"
 	"testing"
 )
 
 func TestInsertionWasSuccess(t *testing.T) {
-	var list pkg.LinkedList
+	var list LinkedList
 
 	err := list.Add(1, 0)
 
@@ -30,7 +29,7 @@ func TestInsertionWasSuccess(t *testing.T) {
 }
 
 func TestListInsertionFailed(t *testing.T) {
-	var list pkg.LinkedList
+	var list LinkedList
 
 	err := list.Add(1, 1)
 
@@ -40,7 +39,7 @@ func TestListInsertionFailed(t *testing.T) {
 }
 
 func TestFindItem(t *testing.T) {
-	var list pkg.LinkedList
+	var list LinkedList
 
 	list.Add(10, 0)
 	list.Add(-1, 1)
@@ -60,7 +59,7 @@ func TestFindItem(t *testing.T) {
 }
 
 func TestDeleteItem(t *testing.T) {
-	var list pkg.LinkedList
+	var list LinkedList
 
 	// Dlete last item
 	list.Add(10, 0)
