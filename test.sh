@@ -8,3 +8,7 @@ go test $BASE_PATH/linkedlist/singlylist
 
 # test binary search tree
 go test $BASE_PATH/binarysearchtree/recurcive
+
+# test hash map
+
+go test $BASE_PATH/hashmap
