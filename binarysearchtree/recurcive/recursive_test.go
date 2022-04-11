@@ -1,4 +1,4 @@
-package recurciveimpl
+package recurcive
 
 import (
 	"testing"

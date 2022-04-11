@@ -1,4 +1,4 @@
-package recurciveimpl
+package recurcive
 
 type Node struct {
 	Data      int
