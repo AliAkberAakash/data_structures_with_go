@@ -3,7 +3,7 @@ package singlylist
 import (
 	"fmt"
 
-	"github.com/AliAkberAakash/data_structures_with_go/linked_list/listerror"
+	"github.com/AliAkberAakash/data_structures_with_go/linkedlist/listerror"
 )
 
 type LinkedList struct {
