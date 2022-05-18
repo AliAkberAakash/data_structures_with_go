@@ -11,3 +11,6 @@ go test $BASE_PATH/binarysearchtree/recurcive
 
 # test hash map
 go test $BASE_PATH/hashmap
+
+# test trie
+go test $BASE_PATH/trie
