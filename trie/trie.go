@@ -1,7 +1,5 @@
 package trie
 
-import "fmt"
-
 const childrenLength = 26
 
 type Node struct {
