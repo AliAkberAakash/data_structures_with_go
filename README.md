@@ -1,6 +1,6 @@
 # data_structures_with_go
 
-This repo contains different algorithms implemented with Go
+This repo contains different data structures implemented with Go
 This is done completely in TDD (Test Drriven Development)
 
 To run the test first make `test.sh` as execucatable with the following command:
