@@ -26,7 +26,6 @@ func (t *Trie) Insert(word string) {
 
 	for i := 0; i < wordLength; i++ {
 		var charIndex int = int(word[i]) - int('a')
-		fmt.Println("Index is:", word[i], 'a', charIndex)
 		if currentNode.Children[charIndex] == nil {
 			currentNode.Children[charIndex] = &Node{}
 		}
@@ -43,7 +42,6 @@ func (t *Trie) Search(word string) bool {
 
 	for i := 0; i < wordLength; i++ {
 		var charIndex int = int(word[i]) - int('a')
-		fmt.Println("Index is:", word[i], 'a', charIndex)
 		if currentNode.Children[charIndex] == nil {
 			return false
 		}
