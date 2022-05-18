@@ -61,7 +61,7 @@ func TestSearchFound(t *testing.T) {
 
 }
 
-func TestSearchNot(t *testing.T) {
+func TestSearchNotFound(t *testing.T) {
 	trie := InitTrie()
 
 	word := "golang"
